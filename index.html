@@ -7,6 +7,7 @@
     <title>SALERO BEACH</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./imagenes/faviconSaleroBeach.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -22,7 +23,7 @@
         <ul class="nav-links">
             <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
             <li class="dropdown">
-                <a href="#menu"><i class="fas fa-utensils dropdown-toggle"></i> Menú ▾</a>
+                <a href="#menu" class="dropdown-toggle"><i class="fas fa-utensils"></i> Menú ▾</a>
                 <ul class="dropdown-menu">
                     <li><a href="#vinos">🍷 Vinos</a></li>
                     <li><a href="#ensaladas">🥗 Ensaladas</a></li>
@@ -30,15 +31,18 @@
                 </ul>
             </li>
 
-            <li><a href="#cocteles">Cócteles</a></li>
+            <li><a href="#cocteles"><i class="fas fa-cocktail"></i> Cócteles</a></li>
             <li><a href="#ubicacion"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
             <li><a href="#comentarios"><i class="fas fa-comments"></i> Comentarios</a></li>
         </ul>
+        <button onclick="toggleDarkMode()">Cambiar tema</button>
     </nav>
 
     <section id="inicio">
-        <img src="./imagenes/tu-imagen.jpg" alt="Plato principal del restaurante" />
+        
     </section>
+
+    
 
     <section id="menu">
         <h2>Nuestro Menú/ Our menu</h2>
@@ -47,73 +51,136 @@
                 <img src="./imagenes/pimientosPadron.png" alt="Plato 1">
                 <h3>PIMIENTOS DE PADRÓN</h3>
                 <p>PADRÓN PEPPER</p>
-                <p>10 €</p>
+                <strong>10 €</strong>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/navajas-a-la-plancha.jpg" alt="Plato 2">
                 <h3>NAVAJAS A LA PLANCHA</h3>
                 <p>GRILLED RAZOR CLAMS</p>
-                <p>18 €</p>
+                <strong>18 €</strong>
                 <p>Suave y refrescante, ideal para verano.</p>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/Mejillones.png" alt="Plato 2">
                 <h3>MEJILLONES AL VAPOR</h3>
                 <p>STEAMED MUSSELS</p>
-                <p>12,50 €</p>
+                <strong>12,50 €</strong>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/zamburiñas.JPG" alt="Plato 2">
                 <h3>ZAMBURIÑAS A LA PLANCHA</h3>
                 <p>GRILLED BABY SCALLOPS</p>
-                <p>21 €</p>
+                <strong>21 €</strong>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/PulpoFeira.png" alt="Plato 2">
                 <h3>PULPO Á FEIRA</h3>
                 <p>GALICIAN-STYLE OCTOPUS</p>
-                <p>23 €</p>
+                <strong>23 €</strong>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/chipisPlancha.png" alt="Plato 2">
                 <h3>CHIPIRONES A LA PLANCHA</h3>
                 <p>GRILLED BABY SQUIDS</p>
-                <p>18 €</p>
+                <strong>18 €</strong>
             </div>
             <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
+                <img src="./imagenes/chipis.jpg" alt="Plato 2">
                 <h3>CHIPIRONES FRITOS</h3>
                 <p>FRIED BABY SQUIDS</p>
-                <P>17 €</P>
+                <strong>17 €</strong>
             </div>
              <div class="menu-item">
                 <img src="./imagenes/plato2.jpg" alt="Plato 2">
                 <h3>PAELLA DE POLLO (Min. 2 personas) (PRECIO POR PERSONA)</h3>
                 <p>CHICKEN PAELLA (Min. 2 people) (PRICE PER PERSON)</p>
-                <P>17 €</P>
+                <strong>15,90 €</strong>
             </div>
              <div class="menu-item">
-                <img src="./imagenes/plato2.jpg" alt="Plato 2">
-                <h3>CHIPIRONES FRITOS</h3>
-                <p>FRIED BABY SQUIDS</p>
-                <P>17 €</P>
+                <img src="./imagenes/PaellaMariscos.jpg" alt="Plato 2">
+                <h3>PAELLA DE MARISCO (Min. 2 personas) (PRECIO POR PERSONA)</h3>
+                <small>SEAFOOD PAELLA (Min. 2 people) (PRICE PER PERSON)</small><br><br>
+                <strong>17,90 €</strong>
+            </div>
+              <div class="menu-item">
+                <img src="./imagenes/PaellaMacos.jpg" alt="Plato 2">
+                <h3>PAELLA MIXTA (Min. 2 personas) (PRECIO POR PERSONA)</h3>
+                <small>MIXED PAELLA (Min. 2 people) (PRICE PER PERSON)</small><br><br>
+                <strong>18,90 €</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/PaelMariscos.jpg" alt="Plato 2">
+                <h3>PAELLA DE VERDURAS (Min. 2 personas) (PRECIO POR PERSONA)</h3>
+                <small>VEGETABLE PAELLA (Min. 2 people) (PRICE PER PERSON)</small><br><br>
+                <strong>14,90 €</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/PaellaMariscos.g" alt="Plato 2">
+                <h3>ARROZ NEGRO (Min. 2 personas) (PRECIO POR PERSONA)</h3>
+                <small>BLACK RICE (Min. 2 people) (PRICE PER PERSON)</small><br><br>
+                <strong>18,90 €</strong>
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/PaellaMariscos.jp" alt="Plato 2">
+                <h3>LUBINA A LA PLANCHA CON PATATAS COCIDAS</h3>
+                <small>GRILLED SEA BASS WITH BOILED POTATOES</small><br><br>
+                <strong>16€</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/Ceviche.png" alt="Plato 2">
+                <h3>CEVICHE CON CALAMARES FRITOS</h3>
+                <small>CEVICHE WITH FRIED BABY SQUID</small><br>
+                <small>Pescado marinado en lima con cebolla morada, cilantro</small><br><br>
+                <strong>22€</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/PaellaMariscos.pg" alt="Plato 2">
+                <h3>LUBINA A LA PLANCHA CON PATATAS COCIDAS</h3>
+                <small>GRILLED SEA BASS WITH BOILED POTATOES</small><br><br>
+                <strong>16€</strong>
             </div>
         </div>
     </section>
 
     <section id="vinos">
-        <h2>Vinos Blancos</h2>
+        <h2>VINOS BLANCOS/ WHITE WINE</h2>
         <div class="menu-container">
             <div class="menu-item">
                 <img src="./imagenes/vino1.jpg" alt="Vino 1">
-                <h3>Ribera del Duero</h3>
-                <p>Intenso y profundo, perfecto para carnes.</p>
+                <h3>BOTELLA DE JOAQUÍN REBODELLO</h3>
+                <small>BOTTLE JOAQUÍN REBODELLO</small>
+                <p>GODELLO</p>
+                <strong>16 €</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>BOTELLA DE VIÑA COSTEIRA</h3>
+                <small>BOTTLE VIÑA COSTEIRA</small>
+                <p>RIBEIRO</p>
+                <strong>14 €</strong>
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>BOTELLA CONDES DE ALBAREI</h3>
+                <small>BOTTLE CONDES DE ALBAREI</small>
+                <p>ALBARIÑO</p>
+                <strong>16 €</strong>
+            </div>
+        </div>
+          <h2>VINOS TINTOS/ RED WINE</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>BOTELLA DE RAMÓN BILBAO</h3>
+                <small>BOTTLE RAMÓN BILBAO</small>
+                <p>RIOJA</p>
+                <strong>16 €</strong>
             </div>
         </div>
     </section>
 
     <section id="cocteles">
-        <h2>Cócteles</h2>
+        <h2>CÓCTELES/ COCKTAILS</h2>
         <div class="menu-container">
             <div class="menu-item">
                 <img src="./imagenes/vino1.jpg" alt="Vino 1">
@@ -136,6 +203,63 @@
                 <p>8€</p>
                 
             </div>
+             <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>CAIPIROSKA</h3>
+                <p>Vodka, azúcar, lima</p>
+                <p>8€</p>
+                
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>TEQUILA SUNRISE</h3>
+                <p>Tequila, zumo de naranja, granadina</p>
+                <p>8€</p>
+                
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>SEX IN CARNOTA</h3>
+                <small>Vodka, licor de melocotón, zumo de naranja</small>
+                <p>8€</p>
+                
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>MAR DE ARDORA</h3>
+                <small>Vodka, blue curaçao, zumo de lima, soda</small>
+                <p>8€</p>
+                
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>LA TRIBU QUE BAILA</h3>
+                <small>Ron blanco, ron añejo, ron dorado, falernum, sirope de canela, soda</small>
+                <p>9€</p>
+                
+            </div>
+            <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>PISCO SOUR</h3>
+                <small>Pisco, zumo de lima, albumen, jarabe de azucar</small>
+                <p>8€</p>
+                
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>ESPRESSO MARTINI</h3>
+                <p>Café espresso, jarabe de azúcar, licor café y vodka8,50</p>
+                <p>8,50€</p>
+                
+            </div>
+             <div class="menu-item">
+                <img src="./imagenes/vino1.jpg" alt="Vino 1">
+                <h3>NEGRONI</h3>
+                <small>Campari, ginebra , vermut rojo</small>
+                <p>8,50€</p>
+                
+            </div>
+
         </div>
     </section>
 
@@ -146,7 +270,8 @@
         </div>
     </section>
 
-    <section class="map-container">
+    <section id="ubicacion" class="map-container">
+        <h2>Encuéntranos aquí</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46830.00827288383!2d-9.154916280468756!3d42.81211655353174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2ed7ca77eb88b5%3A0xef6155826ffc5718!2sSalero%20Beach%20Bar!5e0!3m2!1ses-419!2ses!4v1751819323421!5m2!1ses-419!2ses"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -166,11 +291,43 @@
   document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdown = document.querySelector('.dropdown');
+    const allNavLinks = document.querySelectorAll('.nav-links a');
 
+    // Mostrar u ocultar la navegación móvil
     navToggle.addEventListener('click', function () {
       navLinks.classList.toggle('show');
     });
+
+    // Mostrar u ocultar el submenú "Menú"
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault(); // Evita que salte a "#"
+      dropdown.classList.toggle('open');
+    });
+
+    // Cuando se hace clic en cualquier enlace del menú, cerrar todo
+   allNavLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    // Verifica si el enlace tiene un submenú
+    const isDropdownToggle = link.classList.contains('dropdown-toggle');
+
+    if (!isDropdownToggle) {
+      navLinks.classList.remove('show');
+      dropdown.classList.remove('open');
+    }
+    // Si es un dropdown-toggle, solo alterna el submenú
+    else {
+      e.preventDefault(); // Prevenir scroll si el href="#" 
+      dropdown.classList.toggle('open');
+    }
   });
+});
+
+  });
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
 </script>
 
 

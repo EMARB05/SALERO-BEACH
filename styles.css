@@ -1,9 +1,62 @@
 body {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
+      
     }
+
+    /* 🌙 Modo oscuro */
+body.dark-mode,
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer,
+body.dark-mode section,
+body.dark-mode .menu-container,
+body.dark-mode .dropdown-menu,
+body.dark-mode .comentario {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+body.dark-mode .menu-item{
+  background-color: #333;
+}
+body.dark-mode a {
+    color: #66d9ef !important; /* azul clarito para los links */
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff !important;
+}
+
+body.dark-mode img {
+    filter: brightness(0.8) contrast(1.2); /* oscurece ligeramente las imágenes */
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3
+ {
+  color: #ffffff !important;
+}
+nav button {
+  background-color: #0277bd;; /* color coral */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #01579b ; /* más oscuro al pasar el mouse */
+}
+
+    
+
+    
 
     header {
       position: relative;
