@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#inicio>img{
+  max-height: 400px;
+  width: 70%;
+}
+header {
+    position: relative;
+    /*background: linear-gradient(90deg, #008b8b, #d9f7be);*/
+    background-image: url('./imagenes/CartelSalero.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Puedes ajustar este valor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+    z-index: 1; /* Asegura que esté debajo del texto */
+  }
+
+  .header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2; /* Asegura que el texto esté sobre la capa */
+    margin: 0;
+  }
+  
+  .header-subtitle {
+    font-size: 1.2rem;
+    margin: 0;
+    z-index: 2; /* También encima de la capa */
+  }
+
+/* Estilos para la barra de navegación */
+nav {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  nav ul li a {
+    margin-right: 8px;
+    /* Contraste con el degradado */
+  }
+  
+  
+.navbar {
+    
+    color: #d1d1d1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    /*color: #4dabf7; /* Amarillo dorado */
+  color: white; /* Mantener el texto blanco */
+  background-color: #2980b9; /* Fondo azul oscuro */
+  text-decoration: none;
+  padding: 5px 10px; /* Agregar algo de espacio alrededor */
+  border-radius: 5px; 
+}
+
+/* Botón de menú para móviles */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+ h2 {
+    color: #201c1c;
+}
+#menu {
+    background-color: #f9f5f0; /* Blanco marfil */
+    padding: 2rem 1rem;
+}
+#menu h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.menu-item {
+    background-color: #e7eaee;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    margin: 0.5rem 0;
+}
+
+#vinos {
+    background-color: #c7d3c2; /* Verde oliva claro */
+    padding: 2rem 1rem;
+}
+
+.menu-item p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+.comentario {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color:#1c1c1c;
+}
+
+#comentarios {
+    background-color: #eaeaea; /* Gris claro */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.comentario span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    background-color: #008b8b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a img {
+    width: 32px; /* Tamaño del ícono */
+    height: 32px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+map-container {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 600px; /* Ancho máximo en pantallas grandes */
+    margin: 0 auto; /* Centra el mapa */
+}
+
+/* Estilo del iframe del mapa */
+.map-container iframe {
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: 300px; /* Altura predeterminada */
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .menu-item img {
+        height: 150px;
+    }
+
+    
+
+    .comentario {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
+
+/* Estilo del contenedor del mapa */
+.map-container {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 600px; /* Ancho máximo en pantallas grandes */
+    margin: 0 auto; /* Centra el mapa */
+}
+
+/* Estilo del iframe del mapa */
+.map-container iframe {
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: 300px; /* Altura predeterminada */
+    border: none;
+}
+
+/* Ajustes para tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .map-container iframe {
+        height: 400px; /* Aumenta un poco la altura en tabletas */
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 767px) {
+    .map-container iframe {
+        height: 250px; /* Reduce la altura para pantallas pequeñas */
+    }
+}
+
+
+/* Para pantallas aún más pequeñas (teléfonos) */
+@media (max-width: 480px) {
+
+    
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 0.5rem;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        height: 120px;
+    }
+
+    .comentario {
+        font-size: 0.8rem;
+    }
+}
